@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Container from "./layer/Container";
 import phone from "../assets/phone.svg";
@@ -11,52 +12,119 @@ import linkdin from "../assets/linkdin.png";
 import linkdinOFF from "../assets/linkdinOFF.png";
 import youtube from "../assets/youtube.png";
 import youtubeOFF from "../assets/youtubeOFF.png";
+import america from "../assets/america.png";
+import { FaChevronDown  } from "react-icons/fa";
+
 
 const Header = () => {
+  let languages = [
+    { name: "English", link: america },
+    { name: "Bangla", link: america },
+    { name: "Hindi", link: america },
+    { name: "Arabic", link: america },
+    { name: "French", link: america },
+  ];
+
+  let [show, setShow] = useState(false);
+  let [size, setSize] = useState("English");
+  let manage = (element) => {
+    setSize(element.target.innerText);
+  };
+
   return (
     <div className=" relative after:absolute after:top-0 after:right-1/2 after:w-full after:h-full after:z-[-1]  after:bg-primary">
-      <Container className=" flex justify-between items-center text-sm leading-6 text-white bg-primary py-2 rounded-full ">
-        <div className="left flex gap-x-7">
+      <Container className=" flex justify-between flex-wrap items-center text-sm leading-6 text-white bg-primary py-2 rounded-full ">
+        <div className="left flex gap-x-2 justify-between w-full lg:w-auto md:gap-x-6 xl:gap-x-7">
           <p className="welcome">
-            <a href="" className="block">
+            <a href="" className="block text-[11px] sm:text-sm">
               Welcome to Ortencey Digital Market Agency
             </a>
           </p>
           <div className=" w-0.5 bg-[#708FFF]"></div>
           <p className="number flex items-center gap-x-2">
             <Image className="w-4 " src={phone} alt="phone icon" />
-            <a href="" className="block">
+            <a href="" className=" hidden sm:block">
               +88 ( 5548 ) 6548
             </a>
           </p>
           <div className=" w-0.5 bg-[#708FFF]"></div>
           <p className="mail flex items-center gap-x-3">
             <Image className="w-5" src={mail} alt="mail icon" />
-            <a href="" className="block">
+            <a href="" className=" hidden sm:block">
               infoyour@gmail.com
             </a>
           </p>
         </div>
-        <div className="right">
-          <div className="language"></div>
+        <div className="right flex items-end gap-x-6 xl:gap-x-11">
+          <div className="language">
+            <div>
+              <div
+                onClick={() => setShow(!show)}
+                className="flex items-center gap-x-2  !relative"
+              >
+                 <Image
+                        className=""
+                        src={america}
+                        alt="america icon"
+                      />
+                <p>{size}</p>
+                <FaChevronDown  />
+                <ul
+                  onClick={manage}
+                  className={`w-full bottom-0 translate-y-full left-0 z-50 absolute transition-all duration-300 bg-white ${
+                    show ? "visible opacity-100" : " invisible opacity-0"
+                  }`}
+                >
+                  {languages.map((item, index) => (
+                    <li
+                      key={index}
+                      className="border border-white/40 w-full cursor-default text-center bg-primary/60 hover:bg-primary duration-300 flex  justify-between px-2 py-1"
+                    >
+                      {/* <Image
+                        className=""
+                        height={"12px"}
+                        width={"19px"}
+                        src={item.link}
+                        alt="america icon"
+                      /> */}
+                      {item.name}
+                    </li>
+                  ))}
+
+                </ul>
+              </div>
+            </div>
+          </div>
           <div className="links flex gap-x-4">
             <a href="" className="block relative">
-              <Image className="h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full opacity-0 hover:opacity-100 duration-300" src={facebook} />
+              <Image
+                className="h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full opacity-0 hover:opacity-100 duration-300"
+                src={facebook}
+              />
               <Image className="h-4" src={facebookOFF} />
             </a>
             <div className=" w-0.5 bg-[#708FFF]"></div>
             <a href="" className="block relative">
-              <Image className="h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full opacity-0 hover:opacity-100 duration-300" src={linkdin} />
+              <Image
+                className="h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full opacity-0 hover:opacity-100 duration-300"
+                src={linkdin}
+              />
               <Image className="h-4" src={linkdinOFF} />
             </a>
             <div className=" w-0.5 bg-[#708FFF]"></div>
             <a href="" className="block relative">
-              <Image className="h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full opacity-0 hover:opacity-100 duration-300" src={tweet} />
+              <Image
+                className="h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full opacity-0 hover:opacity-100 duration-300"
+                src={tweet}
+              />
               <Image className="h-4" src={tweetOFF} />
             </a>
             <div className=" w-0.5 bg-[#708FFF]"></div>
             <a href="" className="block relative">
-              <Image className="h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full opacity-0 hover:opacity-100 duration-300" src={youtube} />
+              <Image
+                className="h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full opacity-0 hover:opacity-100 duration-300"
+                src={youtube}
+              />
               <Image className="h-4" src={youtubeOFF} />
             </a>
           </div>
