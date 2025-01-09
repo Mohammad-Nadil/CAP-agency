@@ -78,11 +78,11 @@ const Navbar = () => {
 
   return (
     <div className=" relative after:absolute after:top-0 after:left-1/2 after:w-full after:h-full after:z-[-1]  after:bg-white">
-      <Container className="flex justify-between  items-center text-sm leading-6 bg-white px-4 py-2 lg:py-0 rounded-full ">
+      <Container className="flex justify-between  items-center text-sm leading-6 bg-white px-3 lg:px-4 py-1.5 lg:py-0 rounded-full ">
         <div className="icon">
           <Image className="hidden xl:flex" src={logo} alt="logo" />
           <Image
-            className="flex xl:hidden aspect-square w-12 lg:w-auto"
+            className="flex xl:hidden aspect-square w-10 lg:w-auto"
             src={logoSmall}
             alt="logo"
           />
