@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#3661FC",
+        primaryBlue: "#3661FC",
+        primaryOrange: "#FE681E",
         secondary: "#888888",
         moving: "#4043AF",
       },
@@ -18,6 +19,7 @@ module.exports = {
     fontFamily: {
       nunito: ["Nunito", "serif"],
       DM: ['"DM Sans"', "serif"],
+      poppins: ['"Poppins"', "serif"],
     },
     boxShadow: {
       cardShadow: "0 10px 20px rgba(47, 21, 135 , 0.06)",
