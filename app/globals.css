@@ -2,4 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.bannerImg{
+background-image: url("./assets/HeroBanner.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
 
+.scrollbar::-webkit-scrollbar  {
+    display: none;
+
+}

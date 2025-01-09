@@ -77,7 +77,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className=" relative after:absolute after:top-0 after:left-1/2 after:w-full after:h-full after:z-[-1]  after:bg-white">
+    <nav className=" relative after:absolute after:top-0 after:left-1/2 after:w-full after:h-full after:z-[-1]  after:bg-white px-3">
       <Container className="flex justify-between  items-center text-sm leading-6 bg-white px-3 lg:px-4 py-1.5 lg:py-0 rounded-full ">
         <div className="icon">
           <Image className="hidden xl:flex" src={logo} alt="logo" />
@@ -89,8 +89,8 @@ const Navbar = () => {
         </div>
 
         <ul
-          className={` menu min-w-64 lg:w-auto absolute top-full right-0 lg:static flex flex-col lg:flex-row items-center gap-x-7 2xl:gap-x-11 px-4  bg-white rounded-b-md duration-300 ${
-            menu ? " translate-x-0 " : "translate-x-full lg:translate-x-0"
+          className={` menu min-w-64 lg:w-auto absolute top-full right-0 z-50 lg:static flex flex-col lg:flex-row items-center gap-x-7 2xl:gap-x-11 px-4   rounded-b-md duration-300 ${
+            menu ? " translate-x-4 bg-white " : "translate-x-full lg:translate-x-0 opacity-0"
           }`}
         >
           <Li
@@ -255,7 +255,7 @@ const Navbar = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </nav>
   );
 };
 
