@@ -3,30 +3,30 @@ import Container from "./layer/Container";
 import "../globals.css";
 import Image from "next/image";
 import DM from "../assets/DM.png";
-import DMActive from "../assets/DMActive.png";
+import DM2 from "../assets/DMActive.png";
 import GD from "../assets/GD.png";
-import GDActive from "../assets/GDActive.png";
+import GD2 from "../assets/GDActive.png";
 import WD from "../assets/WD.png";
-import WDActive from "../assets/WDActive.png";
+import WD2 from "../assets/WDActive.png";
 import AD from "../assets/AD.png";
-import ADActive from "../assets/ADActive.png";
+import AD2 from "../assets/ADActive.png";
 import cardHover from "../assets/cardHover.png";
 import cardActive from "../assets/cardActive.png";
 import cardBg from "../assets/cardBg.png";
 
 const ServiceGallery = () => {
   let services = [
-    { name: "Graphics Design", icon: GD, activeIcon: GDActive },
-    { name: "Web Developer", icon: WD, activeIcon: WDActive },
-    { name: "Digital Marketing", icon: DM, activeIcon: DMActive },
-    { name: "App Design", icon: AD, activeIcon: ADActive },
+    { name: "Graphics Design", icon: GD, activeIcon: GD2 },
+    { name: "Web Developer", icon: WD, activeIcon: WD2 },
+    { name: "Digital Marketing", icon: DM, activeIcon: DM2 },
+    { name: "App Design", icon: AD, activeIcon:AD2 },
   ];
 
   return (
     <div>
       <Container className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10 2xl:gap-x-16 pt-20 overflow-x-hidden scrollbar">
         {services.map((service, index) => (
-          <div className="card  relative z-10 group   ">
+          <div className="card relative z-10 group   ">
             <Image
               className="absolute group-hover:-rotate-12 duration-300 h-full w-full top-0 left-0 -z-10"
               src={cardHover}
