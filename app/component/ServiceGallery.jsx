@@ -22,11 +22,14 @@ const ServiceGallery = () => {
     { name: "App Design", icon: AD, activeIcon:AD2 },
   ];
 
+  console.log(DM2); // Should output the resolved path or throw an error
+
+
   return (
     <div>
       <Container className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10 2xl:gap-x-16 pt-20 overflow-x-hidden scrollbar">
         {services.map((service, index) => (
-          <div className="card relative z-10 group   ">
+          <div key={index} className="card relative z-10 group   ">
             <Image
               className="absolute group-hover:-rotate-12 duration-300 h-full w-full top-0 left-0 -z-10"
               src={cardHover}
