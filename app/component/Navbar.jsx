@@ -111,9 +111,9 @@ const Navbar = () => {
             icon={<FaChevronDown />}
           >
             <ul
-              className={`lg:absolute top-3/4 lg:bg-[#EBEFFF] rounded-md duration-300 flex flex-col gap-y-4 lg:gap-y-3 lg:px-4 py-3 z-50 overflow-hidden transition-all ${
+              className={`lg:absolute top-3/4 lg:bg-[#EBEFFF] rounded-md duration-300 flex flex-col gap-y-4 lg:gap-y-3 lg:px-4 z-50 overflow-hidden transition-all ${
                 activeDropdown === "Services"
-                  ? "max-h-44 opacity-100 visible "
+                  ? "max-h-44 opacity-100 visible  py-3 "
                   : "max-h-0 opacity-0 invisible py-0"
               }`}
             >
@@ -130,9 +130,9 @@ const Navbar = () => {
             icon={<FaChevronDown />}
           >
             <ul
-              className={`lg:absolute top-3/4 lg:bg-[#EBEFFF] rounded-md duration-300 flex flex-col gap-y-4 lg:gap-y-3 lg:px-4 py-3 z-50 overflow-hidden transition-all ${
+              className={`lg:absolute top-3/4 lg:bg-[#EBEFFF] rounded-md duration-300 flex flex-col gap-y-4 lg:gap-y-3 lg:px-4  z-50 overflow-hidden transition-all ${
                 activeDropdown === "Team"
-                  ? "max-h-44 opacity-100 visible "
+                  ? "max-h-44 opacity-100 visible py-3"
                   : "max-h-0 opacity-0 invisible py-0"
               }`}
             >
@@ -149,9 +149,9 @@ const Navbar = () => {
             icon={<FaChevronDown />}
           >
             <ul
-              className={`lg:absolute top-3/4 lg:bg-[#EBEFFF] rounded-md duration-300 flex flex-col gap-y-4 lg:gap-y-3 lg:px-4 py-3 z-50 overflow-hidden transition-all ${
+              className={`lg:absolute top-3/4 lg:bg-[#EBEFFF] rounded-md duration-300 flex flex-col gap-y-4 lg:gap-y-3 lg:px-4  z-50 overflow-hidden transition-all ${
                 activeDropdown === "Pages"
-                  ? "max-h-44 opacity-100 visible "
+                  ? "max-h-44 opacity-100 visible py-3"
                   : "max-h-0 opacity-0 invisible py-0"
               }`}
             >
@@ -168,9 +168,9 @@ const Navbar = () => {
             icon={<FaChevronDown />}
           >
             <ul
-              className={`lg:absolute top-3/4 lg:bg-[#EBEFFF] rounded-md duration-300 flex flex-col gap-y-4 lg:gap-y-3 lg:px-4 py-3 z-50 overflow-hidden transition-all ${
+              className={`lg:absolute top-3/4 lg:bg-[#EBEFFF] rounded-md duration-300 flex flex-col gap-y-4 lg:gap-y-3 lg:px-4  z-50 overflow-hidden transition-all ${
                 activeDropdown === "News"
-                  ? "max-h-44 opacity-100 visible "
+                  ? "max-h-44 opacity-100 visible py-3"
                   : "max-h-0 opacity-0 invisible py-0"
               }`}
             >
@@ -221,8 +221,8 @@ const Navbar = () => {
             </div>
           </div>
           <div className="links flex justify-between sm:hidden w-full ">
-            {socialLinks.map((item) => (
-              <a href="" className="block relative text-2xl py-2 text-primaryBlue/60">
+            {socialLinks.map((item , index ) => (
+              <a href="" key={index} className="block relative text-2xl py-2 text-primaryBlue/60">
               {item.icon}
               </a>
             ))}

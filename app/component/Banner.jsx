@@ -29,7 +29,7 @@ const Banner = () => {
             />
             <BtnCustom
               text="Get Started"
-              className="py-2 sm:py-4 px-4 sm:px-8 from-white to-white hover:text-black text-base sm:text-lg "
+              className="py-2 sm:py-4 px-4 sm:px-8 from-white to-white hover:!text-black text-base sm:text-lg "
             />
           </div>
         </div>
