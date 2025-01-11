@@ -6,7 +6,7 @@ import BtnCustom from "./layer/BtnCustom";
 
 const Banner = () => {
   return (
-    <div className="banner bannerImg ">
+    <div className="banner bannerImg overflow-hidden">
       <Container className="flex flex-col sm:flex-row items-center justify-between gap-y-16 gap-x-10 xl:gap-x-16 pt-20 sm:pt-24 lg:pt-40 xl:pt-44 pb-12 sm:pb-16 lg:pb-20">
         <div className="left sm:w-3/5 xl:max-w-[683px] flex flex-col gap-y-12">
           <div className="top flex flex-col gap-y-5 ">

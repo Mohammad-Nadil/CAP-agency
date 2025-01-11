@@ -24,7 +24,7 @@ const ServiceGallery = () => {
 
   return (
     <div>
-      <Container className="grid sm:grid-cols-2 g 2xl:grid-cols-4 gap-10 2xl:gap-x-16 pt-20 overflow-x-hidden scrollbar">
+      <Container className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10 2xl:gap-x-16 pt-20 overflow-x-hidden scrollbar">
         {services.map((service, index) => (
           <div className="card  relative z-10 group   ">
             <Image

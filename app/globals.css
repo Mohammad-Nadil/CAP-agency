@@ -8,6 +8,12 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.HomeAboutBG {
+  background-image: url("./assets/HomeAboutBG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .scrollbar::-webkit-scrollbar {
   display: none;
